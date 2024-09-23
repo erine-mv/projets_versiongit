@@ -11,39 +11,36 @@
 
     <table width="70%" border="5" bgcolor="pink">
 <tr><td colspan="2" >Période de stage: Du 2 juin au 4 juillet</td></tr>
-<tr> <td rowspan="2"><img src="img1.jpg" width="200" heigth="200"></img1></td> <td > Contacter une entreprise </td></tr>
+<tr> <td rowspan="2"><img src="image/img1.jpg" width="200" heigth="200"></img1></td> <td > Contacter une entreprise </td></tr>
 <tr> <td> Remplir la feuille d'engagement (à télécharger sur l'ENT)</td> </tr>
-<tr> <td rowspan="3"><img src="img2.jpg" width="200" heigth="200"></img1></td> <td > Signature du responsable entreprise </td></tr>
+<tr> <td rowspan="3"><img src="image/img2.jpg" width="200" heigth="200"></img1></td> <td > Signature du responsable entreprise </td></tr>
 <tr> <td> Signature du tuteur (votre prof)</td> </tr>
 <tr> <td> Délivrance conevention de stage</td> </tr>
     </table><br>
     <li><a href="../index.html">Retour à l'aceuil</a></li><br>
 
+      <form action="#" method="post">
+      <label for="nom"> Nom :</label>
+      <input type="text" id="nom" name="nom" required>
 
-    <form action="" method="get" class="form-example">
-        <div class="form-example">
-          <label for="name">Prenom: </label>
-          <input type="text" name="name" id="name" required />
-        </div>
-        <div class="form-example">
-            <label for="name">Nom: </label>
-            <input type="text" name="name" id="name" required />
-          </div>
-        <div class="form-example">
-          <label for="date">Date de naissance: </label>
-          <input type="date" name="date" id="date" required />
-        </div>
-        <div class="form-example">
-            <label for="textarea">Adresse postale: </label>
-            <input type="textarea" name="textarea" id="textarea" required />
-          </div>
-          <div class="form-example"></div>
-            <label for="textarea">Classe: </label>
-            <select name="choice"> 
+      <label for="name">Prenom: </label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="email"> E-mail :</label>
+      <input type="number" id="tel" name="tel" required>
+  
+      <label for="date">Date de naissance: </label>
+      <input type="date" name="date" id="date" required />
+        
+      <label for="textarea">Adresse postale: </label>
+      <input type="textarea" name="textarea" id="textarea" required />
+         
+      <label for="textarea">Classe: </label>
+      <select name="choice"> 
                 <option value="First">BTS 1</option> 
                 <option value="Second">BTS 2</option>
                 <option value="Thrid"> L3</option>  
-            </select>
+      </select>
           </div>
         <div class="form-example">
           <input type="submit" value="Valider" />
