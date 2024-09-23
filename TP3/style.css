@@ -1,15 +1,15 @@
 body{
     font-family: Arial, sans-serif;
-    background-color: #D2DFF0;
+    background-color: #97aecb;
     margin: 0;
     padding: 0;
 text-align: center;
 }
 h1{
-    color: #060270;
+    color: #9a75b8;
 }
 form{
-background-color: #F0DCF4;
+background-color: #66396e;
 max-width: 400px;
 margin: 0 auto;
 padding: 20px;
@@ -29,7 +29,7 @@ input[type="text"], input[type="email"], textarea{
     border-radius: 3px;
 }
 input[type="submit"]{
-    background-color: #1F5153;
+    background-color: #548183;
     color: #4B4894;
     border: none;
     padding: 10px 20px;
@@ -37,5 +37,5 @@ input[type="submit"]{
     cursor: pointer;
 }
 input[type="submit"]:hover{
-    background-color: red;
+    background-color: rgb(75, 97, 156);
 }
