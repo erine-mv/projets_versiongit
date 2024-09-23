@@ -29,3 +29,14 @@ form{
         input[type="submit"]:hover{
             background-color: rgb(75, 97, 156);
         }
+    input[type="reset"]{
+        background-color: #548183;
+        color: #6c1d4e;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    input[type="reset"]:hover{
+        background-color: rgb(137, 82, 116);
+    }
