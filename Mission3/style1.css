@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #78616e;
+    font-family: 'Arial', sans-serif;
+}
+.carte {
+    background-color: #0c0c0c;
+    border: 2px solid #778492; /* Bordure colorée */
+    border-radius: 10px;
+    padding: 20px;
+    width: 350px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.carte:hover {
+    transform: scale(1.05); /* Effet de zoom au survol */
+}
+.nom {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e3b3d9;
+    margin-bottom: 10px;
+}
+.titre {
+    font-size: 22px;
+    color: #712a5a;
+    margin-bottom: 15px;
+}
+.description {
+    font-size: 16px;
+    color: #da95ce;
+    line-height: 1.5;
+}
