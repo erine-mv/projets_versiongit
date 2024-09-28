@@ -1,12 +1,12 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #d9bfbf;
+    background-color: #bf99b4;
     margin: 0;
     padding: 0;
 }
 
 .menu {
-    background-color: #9f7187;
+    background-color: #c8b0b0;
     padding: 10px 20px;
 }
 
@@ -22,7 +22,7 @@ body {
 }
 
 .menu a {
-    color: rgb(20, 20, 20);
+    color: rgb(163, 134, 134);
     text-decoration: none;
     font-size: 18px;
 }
