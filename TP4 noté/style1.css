@@ -29,7 +29,7 @@ body
 {
     background-color: rgb(221, 229, 131);
     float: left;
-    height: 200px;
+    height: 300px;
     width: 25%;
     margin: 10px;
     border: 2px solid #778492; /* Bordure colorée */
@@ -38,7 +38,7 @@ body
 }
 .Introduction
 {
-    background-color: rgb(235, 223, 229);
+    background-color: rgb(222, 177, 81);
     float: center;
     height: px;
     width: 25%;
@@ -51,7 +51,7 @@ body
 {
     background-color: rgb(159, 228, 186);
     float: left;
-    height: 200px;
+    height: 300px;
     width: 25%;
     margin: 10px;
     border: 2px solid #778492; /* Bordure colorée */
@@ -60,7 +60,7 @@ body
 }
 .Image
 {
-    background-color: rgb(235, 223, 229);
+    background-color: rgb(149, 222, 129);
     float: center;
     height: px;
     width: 25%;
@@ -73,7 +73,7 @@ body
 {
     background-color: rgb(229, 195, 131);
     float: left;
-    height: 200px;
+    height: 300px;
     width: 25%;
     margin: 10px;
     border: 2px solid #778492; /* Bordure colorée */
@@ -82,7 +82,7 @@ body
 }
 .Introduction2
 {
-    background-color: rgb(235, 223, 229);
+    background-color: rgb(231, 134, 125);
     float: center;
     height: px;
     width: 25%;
