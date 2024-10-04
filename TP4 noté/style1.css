@@ -1,16 +1,11 @@
 body
 {
-        
-
         align-items: center;
         height: 100vh;
         margin: 0;
         background-color: #78616e;
         font-family: 'Arial', sans-serif;
 }
-
-
-
 .block:hover {
     transform: scale(1.05);
 }
