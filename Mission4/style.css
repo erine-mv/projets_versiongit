@@ -12,8 +12,8 @@ body
     background-color: rgb(156, 207, 231);
     float: left;
     height: 350px;
-    width: 90%;
-    margin: 10px;
+    width: 70%;
+    margin: 70px;
     border: 5px solid #3388CC; 
     border-radius: 10px;
     padding: 20px;
@@ -23,7 +23,7 @@ body
     background-color: rgb(57, 96, 93);
     float: left;
     height: px;
-    width: 30%;
+    width: 50%;
     margin: 10px;
     border: 5px solid #3388CC; 
     border-radius: 10px;
@@ -35,7 +35,7 @@ body
     height: px;
     float: right;
     width: 22%;
-    margin: 10px;
+    margin: auto;
     border: 5px solid #3388CC; 
     border-radius: 10px;
     padding: 20px;
@@ -45,8 +45,8 @@ body
     background-color: rgb(139, 189, 223);
     float: left;
     height: 350px;
-    width: 90%;
-    margin: 10px;
+    width: 70%;
+    margin: 70px;
     border: 5px solid #3388CC; 
     border-radius: 10px;
     padding: 20px;
@@ -56,7 +56,7 @@ body
     background-color: rgb(235, 195, 244);
     float: left;
     height: px;
-    width: 30%;
+    width: 20%;
     margin: 10px;
     border: 5px solid #3388CC; 
     border-radius: 10px;
@@ -77,9 +77,9 @@ body
 {
     background-color: rgb(201, 217, 245);
     float: left;
-    height: 450px;
-    width: 90%;
-    margin: 10px;
+    height: 570px;
+    width: 70%;
+    margin: 70px;
     border: 5px solid #3388CC; 
     border-radius: 10px;
     padding: 20px;
@@ -100,7 +100,7 @@ body
     background-color: rgb(99, 99, 131);
     float: left;
     height: px;
-    width: 30%;
+    width: 10%;
     margin: 10px;
     border: 5px solid #3388CC; 
     border-radius: 10px;
@@ -110,9 +110,9 @@ body
 {
     background-color: rgb(241, 204, 231);
     float: left;
-    height: 350px;
-    width: 90%;
-    margin: 10px;
+    height: 420px;
+    width: 70%;
+    margin: 70px;
     border: 5px solid #3388CC; 
     border-radius: 10px;
     padding: 20px;
@@ -133,7 +133,7 @@ body
     background-color: rgb(168, 187, 227);
     float: left;
     height: px;
-    width: 30%;
+    width: 15%;
     margin: 10px;
     border: 5px solid #3388CC; 
     border-radius: 10px;
@@ -144,12 +144,12 @@ body
     background-color: rgb(244, 233, 241);
     float: left;
     height: 200px;
-    width: 90%;
-    margin: 10px;
+    width: 70%;
+    margin: 70px;
     border: 5px solid #3388CC; 
     border-radius: 10px;
     padding: 20px;
-}
+} 
 .article4
 {
     background-color: rgb(120, 131, 154);
@@ -166,7 +166,7 @@ body
     background-color: rgb(184, 228, 240);
     float: left;
     height: px;
-    width: 30%;
+    width: 15%;
     margin: 10px;
     border: 5px solid #3388CC; 
     border-radius: 10px;
@@ -174,12 +174,14 @@ body
 }
 .container
 {
-    font-size: ;
+    font: size 20px; 
     color: #712a5a;
+    width: 780px;
+    float: center;
     margin-bottom: 15px;
     margin: auto;
-    border: 5px solid #52677b; 
-    border-radius: 10px;
+    border: 5px solid #3388CC; 
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5); 
 }
 
 
