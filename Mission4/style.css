@@ -174,7 +174,7 @@ body
 }
 .container
 {
-    font: size 20px; 
+    font-size: 20px; 
     color: #712a5a;
     width: 780px;
     float: center;
