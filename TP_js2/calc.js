@@ -49,7 +49,7 @@ function permute(){
 
 function parite(){
     var v;
-    v = Numner(document.getElementById("t3").value);
+    v = Number(document.getElementById("t3").value);
     if(v%2==0)
     t4.value = ("Pair")
     else
