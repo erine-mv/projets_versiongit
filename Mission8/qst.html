@@ -15,13 +15,122 @@
         <section id="exercises">
            
         </section>
+        <script>
+            // Liste des exercices
+            const exercices = [
+                {
+                    titre: "Additionner deux nombres",
+                    description: "Créer une fonction qui retourne la somme de deux nombres.",
+                    code: `function addition(a, b) { return a + b; }\nconsole.log(addition(3, 5));`
+                },
+                {
+                    titre: "Nombre pair ou impair",
+                    description: "Vérifiez si un nombre est pair ou impair.",
+                    code: `function estPair(nombre) { return nombre % 2 === 0 ? "Pair" : "Impair"; }\nconsole.log(estPair(4));`
+                },
+                {
+                    titre: "Afficher une chaîne en majuscules",
+                    description: "Transformez une chaîne de caractères en majuscules.",
+                    code: `function enMajuscules(chaine) { return chaine.toUpperCase(); }\nconsole.log(enMajuscules("bonjour"));`
+                },
+                {
+                    titre: "Compter jusqu'à 10",
+                    description: "Affichez les nombres de 1 à 10 dans la console.",
+                    code: `for (let i = 1; i <= 10; i++) { console.log(i); }`
+                },
+                {
+                    titre: "Calculer la longueur d'une chaîne",
+                    description: "Retournez la longueur d'une chaîne de caractères.",
+                    code: `function longueurDeChaine(chaine) { return chaine.length; }\nconsole.log(longueurDeChaine("JavaScript"));`
+                },
+                {
+                    titre: "Retourner une chaîne",
+                    description: "Inversez une chaîne de caractères.",
+                    code: `function inverser(chaine) { return chaine.split("").reverse().join(""); }\nconsole.log(inverser("bonjour"));`
+                },
+                {
+                    titre: "Trouver le plus grand nombre",
+                    description: "Retournez le plus grand de deux nombres.",
+                    code: `function max(a, b) { return a > b ? a : b; }\nconsole.log(max(7, 10));`
+                },
+                {
+                    titre: "Compter les voyelles",
+                    description: "Comptez le nombre de voyelles dans une chaîne.",
+                    code: `function compterVoyelles(chaine) {\nconst voyelles = "aeiouAEIOU";\nreturn [...chaine].filter(c => voyelles.includes(c)).length; }\nconsole.log(compterVoyelles("javascript"));`
+                },
+                {
+                    titre: "Table de multiplication",
+                    description: "Affichez la table de multiplication d'un nombre.",
+                    code: `function tableMultiplication(nombre) {\nfor (let i = 1; i <= 10; i++) {\nconsole.log(\`\${nombre} x \${i} = \${nombre * i}\`); } }\ntableMultiplication(5);`
+                },
+                {
+                    titre: "Vérifier un palindrome",
+                    description: "Vérifiez si une chaîne est un palindrome.",
+                    code: `function estPalindrome(chaine) {\nconst inverse = chaine.split("").reverse().join("");\nreturn chaine === inverse; }\nconsole.log(estPalindrome("radar"));`
+                },
+                {
+                    titre: "Convertir Celsius en Fahrenheit",
+                    description: "Convertissez une température de Celsius en Fahrenheit.",
+                    code: `function celsiusEnFahrenheit(celsius) { return (celsius * 9/5) + 32; }\nconsole.log(celsiusEnFahrenheit(30));`
+                },
+                {
+                    titre: "Somme des éléments d'un tableau",
+                    description: "Retournez la somme des nombres dans un tableau.",
+                    code: `function sommeTableau(tableau) {\nreturn tableau.reduce((acc, val) => acc + val, 0); }\nconsole.log(sommeTableau([1, 2, 3, 4, 5]));`
+                },
+                {
+                    titre: "Remplir un tableau",
+                    description: "Ajoutez les nombres de 1 à 5 dans un tableau.",
+                    code: `const tableau = [];\nfor (let i = 1; i <= 5; i++) {\ntableau.push(i); }\nconsole.log(tableau);`
+                },
+                {
+                    titre: "Trouver un élément dans un tableau",
+                    description: "Vérifiez si un élément existe dans un tableau.",
+                    code: `function existeDansTableau(tableau, element) {\nreturn tableau.includes(element); }\nconsole.log(existeDansTableau([1, 2, 3, 4], 3));`
+                },
+                {
+                    titre: "Calculer la factorielle",
+                    description: "Retournez la factorielle d'un nombre.",
+                    code: `function factorielle(n) {\nlet result = 1;\nfor (let i = 1; i <= n; i++) {\nresult *= i; }\nreturn result; }\nconsole.log(factorielle(5));`
+                }
+            ];
+    
+            const section = document.getElementById("exercices");
+    
+            exercices.forEach((exercice, index) => {
+                const div = document.createElement("div");
+                div.innerHTML = `
+                    <h2>Exercice ${index + 1}: ${exercice.titre}</h2>
+                    <p>${exercice.description}</p>
+                    <button onclick="testerExercice(${index})">Tester</button>
+                    <button onclick="afficherCode(${index})">Afficher le code</button>
+                    <pre id="code-${index}" style="display:none;"></pre>
+                `;
+                section.appendChild(div);
+            });
+    
+            function testerExercice(index) {
+                try {
+                    eval(exercices[index].code);
+                } catch (e) {
+                    alert("Erreur dans le code : " + e.message);
+                }
+            }
+    
+            function afficherCode(index) {
+                const pre = document.getElementById(`code-${index}`);
+                pre.textContent = exercices[index].code;
+                pre.style.display = pre.style.display === "none" ? "block" : "none";
+            }
+        </script>
+  
         <div class="back-to-menu">
             <h2>Retour au Sommaire</h2>
             <a href="../index.html" class="menu-button">Sommaire</a>
         </div>
     </main>
     <footer>
-        <p>Créé par MOCAN Bogdan SIO 1 © 2024</p>
+        <p>Créé par MVOUAMA Erine BTS SIO 1B © 2024-2025</p>
     </footer>
     <script src="qst.js"></script>
 </body>
