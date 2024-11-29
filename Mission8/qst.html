@@ -3,135 +3,286 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mission 8 - JavaScript</title>
+    <title>Plateforme d'Auto-Formation JavaScript</title>
     <link rel="stylesheet" href="qst.css">
+    <script src="qst.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Banque d'Exercices JavaScript</h1>
-        <p>Testez vos compétences avec ces exemples de code JavaScript interactifs !</p>
+    <header class="header">
+        <h1>Exercices JavaScript</h1>
     </header>
-    <main> 
-        <section id="exercises">
-           
-        </section>
-        <script>
-            // Liste des exercices
-            const exercices = [
-                {
-                    titre: "Additionner deux nombres",
-                    description: "Créer une fonction qui retourne la somme de deux nombres.",
-                    code: `function addition(a, b) { return a + b; }\nconsole.log(addition(3, 5));`
-                },
-                {
-                    titre: "Nombre pair ou impair",
-                    description: "Vérifiez si un nombre est pair ou impair.",
-                    code: `function estPair(nombre) { return nombre % 2 === 0 ? "Pair" : "Impair"; }\nconsole.log(estPair(4));`
-                },
-                {
-                    titre: "Afficher une chaîne en majuscules",
-                    description: "Transformez une chaîne de caractères en majuscules.",
-                    code: `function enMajuscules(chaine) { return chaine.toUpperCase(); }\nconsole.log(enMajuscules("bonjour"));`
-                },
-                {
-                    titre: "Compter jusqu'à 10",
-                    description: "Affichez les nombres de 1 à 10 dans la console.",
-                    code: `for (let i = 1; i <= 10; i++) { console.log(i); }`
-                },
-                {
-                    titre: "Calculer la longueur d'une chaîne",
-                    description: "Retournez la longueur d'une chaîne de caractères.",
-                    code: `function longueurDeChaine(chaine) { return chaine.length; }\nconsole.log(longueurDeChaine("JavaScript"));`
-                },
-                {
-                    titre: "Retourner une chaîne",
-                    description: "Inversez une chaîne de caractères.",
-                    code: `function inverser(chaine) { return chaine.split("").reverse().join(""); }\nconsole.log(inverser("bonjour"));`
-                },
-                {
-                    titre: "Trouver le plus grand nombre",
-                    description: "Retournez le plus grand de deux nombres.",
-                    code: `function max(a, b) { return a > b ? a : b; }\nconsole.log(max(7, 10));`
-                },
-                {
-                    titre: "Compter les voyelles",
-                    description: "Comptez le nombre de voyelles dans une chaîne.",
-                    code: `function compterVoyelles(chaine) {\nconst voyelles = "aeiouAEIOU";\nreturn [...chaine].filter(c => voyelles.includes(c)).length; }\nconsole.log(compterVoyelles("javascript"));`
-                },
-                {
-                    titre: "Table de multiplication",
-                    description: "Affichez la table de multiplication d'un nombre.",
-                    code: `function tableMultiplication(nombre) {\nfor (let i = 1; i <= 10; i++) {\nconsole.log(\`\${nombre} x \${i} = \${nombre * i}\`); } }\ntableMultiplication(5);`
-                },
-                {
-                    titre: "Vérifier un palindrome",
-                    description: "Vérifiez si une chaîne est un palindrome.",
-                    code: `function estPalindrome(chaine) {\nconst inverse = chaine.split("").reverse().join("");\nreturn chaine === inverse; }\nconsole.log(estPalindrome("radar"));`
-                },
-                {
-                    titre: "Convertir Celsius en Fahrenheit",
-                    description: "Convertissez une température de Celsius en Fahrenheit.",
-                    code: `function celsiusEnFahrenheit(celsius) { return (celsius * 9/5) + 32; }\nconsole.log(celsiusEnFahrenheit(30));`
-                },
-                {
-                    titre: "Somme des éléments d'un tableau",
-                    description: "Retournez la somme des nombres dans un tableau.",
-                    code: `function sommeTableau(tableau) {\nreturn tableau.reduce((acc, val) => acc + val, 0); }\nconsole.log(sommeTableau([1, 2, 3, 4, 5]));`
-                },
-                {
-                    titre: "Remplir un tableau",
-                    description: "Ajoutez les nombres de 1 à 5 dans un tableau.",
-                    code: `const tableau = [];\nfor (let i = 1; i <= 5; i++) {\ntableau.push(i); }\nconsole.log(tableau);`
-                },
-                {
-                    titre: "Trouver un élément dans un tableau",
-                    description: "Vérifiez si un élément existe dans un tableau.",
-                    code: `function existeDansTableau(tableau, element) {\nreturn tableau.includes(element); }\nconsole.log(existeDansTableau([1, 2, 3, 4], 3));`
-                },
-                {
-                    titre: "Calculer la factorielle",
-                    description: "Retournez la factorielle d'un nombre.",
-                    code: `function factorielle(n) {\nlet result = 1;\nfor (let i = 1; i <= n; i++) {\nresult *= i; }\nreturn result; }\nconsole.log(factorielle(5));`
-                }
-            ];
-    
-            const section = document.getElementById("exercices");
-    
-            exercices.forEach((exercice, index) => {
-                const div = document.createElement("div");
-                div.innerHTML = `
-                    <h2>Exercice ${index + 1}: ${exercice.titre}</h2>
-                    <p>${exercice.description}</p>
-                    <button onclick="testerExercice(${index})">Tester</button>
-                    <button onclick="afficherCode(${index})">Afficher le code</button>
-                    <pre id="code-${index}" style="display:none;"></pre>
-                `;
-                section.appendChild(div);
-            });
-    
-            function testerExercice(index) {
-                try {
-                    eval(exercices[index].code);
-                } catch (e) {
-                    alert("Erreur dans le code : " + e.message);
-                }
-            }
-    
-            function afficherCode(index) {
-                const pre = document.getElementById(`code-${index}`);
-                pre.textContent = exercices[index].code;
-                pre.style.display = pre.style.display === "none" ? "block" : "none";
-            }
-        </script>
-  
-        <div class="back-to-menu">
-            <h2>Retour au Sommaire</h2>
-            <a href="../index.html" class="menu-button">Sommaire</a>
+
+    <main class="main">
+      <!-- Exercice 1 -->
+      <section class="exercise">
+        <h2>1. Addition de deux nombres</h2>
+        <p>Créer une fonction qui prend deux nombres en entrée et retourne leur somme.</p>
+        <button onclick="toggleSolution('solution1')">Voir la solution</button>
+        <button onclick="toggleDemo('demo1')">Voir la démonstration</button>
+        <div id="solution1" class="solution" style="display:none;">
+            <h4>Solution :</h4>
+            <pre><code>function addition(a, b) { return a + b; }</code></pre>
         </div>
+        <div id="demo1" class="demo" style="display:none;">
+            <label>Nombre 1: <input type="number" id="num1_1"></label>
+            <label>Nombre 2: <input type="number" id="num2_1"></label>
+            <button onclick="calculateSum()">Calculer</button>
+            <p id="result_1"></p>
+        </div>
+    </section>
+
+    <!-- Exercice 2 -->
+    <section class="exercise">
+        <h2>2. Multiplication de deux nombres</h2>
+        <p>Créer une fonction qui prend deux nombres en entrée et retourne leur produit.</p>
+        <button onclick="toggleSolution('solution2')">Voir la solution</button>
+        <button onclick="toggleDemo('demo2')">Voir la démonstration</button>
+        <div id="solution2" class="solution" style="display:none;">
+            <h4>Solution :</h4>
+            <pre><code>function multiplication(a, b) { return a * b; }</code></pre>
+        </div>
+        <div id="demo2" class="demo" style="display:none;">
+            <label>Nombre 1: <input type="number" id="num1_2"></label>
+            <label>Nombre 2: <input type="number" id="num2_2"></label>
+            <button onclick="calculateProduct()">Calculer</button>
+            <p id="result_2"></p>
+        </div>
+    </section>
+
+    <!-- Exercice 3 -->
+    <section class="exercise">
+        <h2>3. Soustraction de deux nombres</h2>
+        <p>Créer une fonction qui retourne la différence entre deux nombres.</p>
+        <button onclick="toggleSolution('solution3')">Voir la solution</button>
+        <button onclick="toggleDemo('demo3')">Voir la démonstration</button>
+        <div id="solution3" class="solution" style="display:none;">
+            <h4>Solution :</h4>
+            <pre><code>function subtraction(a, b) { return a - b; }</code></pre>
+        </div>
+        <div id="demo3" class="demo" style="display:none;">
+            <label>Nombre 1: <input type="number" id="num1_3"></label>
+            <label>Nombre 2: <input type="number" id="num2_3"></label>
+            <button onclick="calculateDifference()">Calculer</button>
+            <p id="result_3"></p>
+        </div>
+    </section>
+
+    <!-- Exercice 4 -->
+    <section class="exercise">
+        <h2>4. Division de deux nombres</h2>
+        <p>Créer une fonction qui retourne le quotient de deux nombres.</p>
+        <button onclick="toggleSolution('solution4')">Voir la solution</button>
+        <button onclick="toggleDemo('demo4')">Voir la démonstration</button>
+        <div id="solution4" class="solution" style="display:none;">
+            <h4>Solution :</h4>
+            <pre><code>function division(a, b) { return a / b; }</code></pre>
+        </div>
+        <div id="demo4" class="demo" style="display:none;">
+            <label>Nombre 1: <input type="number" id="num1_4"></label>
+            <label>Nombre 2: <input type="number" id="num2_4"></label>
+            <button onclick="calculateQuotient()">Calculer</button>
+            <p id="result_4"></p>
+        </div>
+    </section>
+
+    <!-- Exercice 5 -->
+    <section class="exercise">
+        <h2>5. Trouver le maximum</h2>
+        <p>Créer une fonction qui retourne le plus grand de deux nombres.</p>
+        <button onclick="toggleSolution('solution5')">Voir la solution</button>
+        <button onclick="toggleDemo('demo5')">Voir la démonstration</button>
+        <div id="solution5" class="solution" style="display:none;">
+            <h4>Solution :</h4>
+            <pre><code>function max(a, b) { return a > b ? a : b; }</code></pre>
+        </div>
+        <div id="demo5" class="demo" style="display:none;">
+            <label>Nombre 1: <input type="number" id="num1_5"></label>
+            <label>Nombre 2: <input type="number" id="num2_5"></label>
+            <button onclick="calculateMax()">Calculer</button>
+            <p id="result_5"></p>
+        </div>
+    </section>
+
+    <!-- Exercice 6 -->
+    <section class="exercise">
+        <h2>6. Vérifier un nombre pair</h2>
+        <p>Créer une fonction qui détermine si un nombre est pair.</p>
+        <button onclick="toggleSolution('solution6')">Voir la solution</button>
+        <button onclick="toggleDemo('demo6')">Voir la démonstration</button>
+        <div id="solution6" class="solution" style="display:none;">
+            <h4>Solution :</h4>
+            <pre><code>function isEven(num) { return num % 2 === 0; }</code></pre>
+        </div>
+        <div id="demo6" class="demo" style="display:none;">
+            <label>Nombre : <input type="number" id="num1_6"></label>
+            <button onclick="checkEven()">Vérifier</button>
+            <p id="result_6"></p>
+        </div>
+    </section>
+    <section class="exercise">
+        <h2>7. Générer une pyramide d'étoiles</h2>
+        <p>Créer une fonction qui génère une pyramide d'étoiles de hauteur n.</p>
+        <button onclick="toggleSolution('solution7')">Voir la solution</button>
+        <button onclick="toggleDemo('demo7')">Voir la démonstration</button>
+        <div id="solution7" class="solution" style="display:none;">
+            <h4>Solution :</h4>
+            <pre><code>
+                function generatePyramid(height) {
+                    for (let i = 1; i <= height; i++) {
+                    console.log(' '.repeat(height - i) + '*'.repeat(2 * i - 1));
+                    }
+                }
+            </code></pre>
+        </div>
+        <div id="demo7" class="demo" style="display:none;">
+            <label>Hauteur de la pyramide : <input type="number" id="height7" min="1"></label>
+            <button onclick="generatePyramidDemo()">Générer</button>
+            <pre id="result_7"></pre>
+        </div>
+    </section>
+    
+    <!-- Exercice 8 -->
+    <section class="exercise">
+        <h2>8. Calculer la puissance</h2>
+        <p>Créer une fonction qui retourne le résultat de la base élevée à la puissance de l'exposant.</p>
+        <button onclick="toggleSolution('solution8')">Voir la solution</button>
+        <button onclick="toggleDemo('demo8')">Voir la démonstration</button>
+        <div id="solution8" class="solution" style="display:none;">
+            <h4>Solution :</h4>
+            <pre><code>function power(base, exponent) { return base ** exponent; }</code></pre>
+        </div>
+        <div id="demo8" class="demo" style="display:none;">
+            <label>Base : <input type="number" id="base8"></label>
+            <label>Exposant : <input type="number" id="exponent8"></label>
+            <button onclick="calculatePower()">Calculer</button>
+            <p id="result_8"></p>
+        </div>
+    </section>
+
+    <!-- Exercice 9 -->
+    <section class="exercise">
+        <h2>9. Vérifier une chaîne palindrome</h2>
+        <p>Créer une fonction qui détermine si une chaîne de caractères est un palindrome.</p>
+        <button onclick="toggleSolution('solution9')">Voir la solution</button>
+        <button onclick="toggleDemo('demo9')">Voir la démonstration</button>
+        <div id="solution9" class="solution" style="display:none;">
+            <h4>Solution :</h4>
+            <pre><code style="font-size: small;">function isPalindrome(str) {const reversed = str.split('').reverse().join('');return str === reversed;}</code></pre>
+        </div>
+        <div id="demo9" class="demo" style="display:none;">
+            <label>Texte : <input type="text" id="text9"></label>
+            <button onclick="checkPalindrome()">Vérifier</button>
+            <p id="result_9"></p>
+        </div>
+    </section>
+
+    <!-- Exercice 10 -->
+    <section class="exercise">
+        <h2>10. Somme des nombres dans un tableau</h2>
+        <p>Créer une fonction qui retourne la somme des nombres d'un tableau.</p>
+        <button onclick="toggleSolution('solution10')">Voir la solution</button>
+        <button onclick="toggleDemo('demo10')">Voir la démonstration</button>
+        <div id="solution10" class="solution" style="display:none;">
+            <h4>Solution :</h4>
+            <pre><code>function sumArray(arr) {return arr.reduce((acc, num) => acc + num, 0);}</code></pre>
+        </div>
+        <div id="demo10" class="demo" style="display:none;">
+            <label>Tableau (ex: 1,2,3) : <input type="text" id="array10"></label>
+            <button onclick="calculateArraySum()">Calculer</button>
+            <p id="result_10"></p>
+        </div>
+    </section>
+
+    <!-- Exercice 11 -->
+    <section class="exercise">
+        <h2>11. Nombre aléatoire entre deux valeurs</h2>
+        <p>Créer une fonction qui génère un nombre aléatoire entre deux valeurs données.</p>
+        <button onclick="toggleSolution('solution11')">Voir la solution</button>
+        <button onclick="toggleDemo('demo11')">Voir la démonstration</button>
+        <div id="solution11" class="solution" style="display:none;">
+            <h4>Solution :</h4>
+            <pre><code>function randomBetween(min, max) {return Math.floor(Math.random() * (max - min + 1)) + min;}</code></pre>
+        </div>
+        <div id="demo11" class="demo" style="display:none;">
+            <label>Min : <input type="number" id="min11"></label>
+            <label>Max : <input type="number" id="max11"></label>
+            <button onclick="generateRandom()">Générer</button>
+            <p id="result_11"></p>
+        </div>
+    </section>
+
+    <!-- Exercice 12 -->
+    <section class="exercise">
+        <h2>12. Trier un tableau</h2>
+        <p>Créer une fonction qui trie un tableau de nombres dans l'ordre croissant.</p>
+        <button onclick="toggleSolution('solution12')">Voir la solution</button>
+        <button onclick="toggleDemo('demo12')">Voir la démonstration</button>
+        <div id="solution12" class="solution" style="display:none;">
+            <h4>Solution :</h4>
+            <pre><code>function sortArray(arr) {return arr.sort((a, b) => a - b);}</code></pre>
+        </div>
+        <div id="demo12" class="demo" style="display:none;">
+            <label>Tableau (ex: 3,1,2) : <input type="text" id="array12"></label>
+            <button onclick="sortArray()">Trier</button>
+            <p id="result_12"></p>
+        </div>
+    </section>
+
+    <!-- Exercice 13 -->
+    <section class="exercise">
+        <h2>13. Trouver la valeur minimale</h2>
+        <p>Créer une fonction qui retourne le plus petit élément d'un tableau.</p>
+        <button onclick="toggleSolution('solution13')">Voir la solution</button>
+        <button onclick="toggleDemo('demo13')">Voir la démonstration</button>
+        <div id="solution13" class="solution" style="display:none;">
+            <h4>Solution :</h4>
+            <pre><code>function findMin(arr) {return Math.min(...arr);}</code></pre>
+        </div>
+        <div id="demo13" class="demo" style="display:none;">
+            <label>Tableau (ex: 3,1,2): <input type="text" id="array13"></label>
+            <button onclick="findMinimum()">Trouver</button>
+            <p id="result_13"></p>
+        </div>
+    </section>
+
+    <!-- Exercice 14 -->
+    <section class="exercise">
+        <h2>14. Compter les voyelles</h2>
+        <p>Créer une fonction qui compte le nombre de voyelles dans une chaîne de caractères.</p>
+        <button onclick="toggleSolution('solution14')">Voir la solution</button>
+        <button onclick="toggleDemo('demo14')">Voir la démonstration</button>
+        <div id="solution14" class="solution" style="display:none;">
+            <h4>Solution :</h4>
+            <pre><code>function countVowels(str) {return str.match(/[aeiou]/gi)?.length || 0;}</code></pre>
+        </div>
+        <div id="demo14" class="demo" style="display:none;">
+            <label>Texte : <input type="text" id="text14"></label>
+            <button onclick="countVowel()">Compter</button>
+            <p id="result_14"></p>
+        </div>
+    </section>
+
+    <!-- Exercice 15 -->
+    <section class="exercise">
+        <h2>15. Calculer la factorielle</h2>
+        <p>Créer une fonction qui retourne la factorielle d'un nombre.</p>
+        <button onclick="toggleSolution('solution15')">Voir la solution</button>
+        <button onclick="toggleDemo('demo15')">Voir la démonstration</button>
+        <div id="solution15" class="solution" style="display:none;">
+            <h4>Solution :</h4>
+            <pre><code>function factorial(n) {return n === 0 ? 1 : n * factorial(n - 1);}</code></pre>
+        </div>
+        <div id="demo15" class="demo" style="display:none;">
+            <label>Nombre : <input type="number" id="num15"></label>
+            <button onclick="calculateFactorial()">Calculer</button>
+            <p id="result_15"></p>
+        </div>
+    </section>
+
     </main>
+
     <footer>
-        <p>Créé par MVOUAMA Erine BTS SIO 1B © 2024-2025</p>
+        <a href="../index.html">RETOUR A MES MISSIONS</a>
     </footer>
-    <script src="qst.js"></script>
 </body>
 </html>
