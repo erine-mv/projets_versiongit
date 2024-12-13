@@ -1,0 +1,155 @@
+/* Style général */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #180419;
+  }
+  
+  .facture-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fdf0fd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  .header-facture {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid #3d0e3f;
+    padding-bottom: 10px;
+  }
+  
+  .info-compagnie h1 {
+    font-size: 1.8em;
+    color: #3d0e3f;
+    margin: 0;
+  }
+  
+  .info-facture h2 {
+    font-size: 1.5em;
+    color: #3d0e3f;
+    text-align: right;
+  }
+  
+  .info-facture p {
+    text-align: right;
+    margin: 5px 0;
+    font-size: 0.9em;
+  }
+  
+  /* Destinataires */
+  .destinataires {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  
+  .destinataire, .envoyer-a {
+    width: 48%;
+    background-color: #d885ba;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .destinataire h3, .envoyer-a h3 {
+    margin: 0;
+    color: #3d0e3f;
+    font-size: 1.2em;
+    border-bottom: 1px solid #3d0e3f;
+    padding-bottom: 5px;
+  }
+  
+  .destinataire p, .envoyer-a p {
+    margin: 5px 0;
+    font-size: 0.9em;
+  }
+  
+  /* Tableau */
+  .table-facture table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+  }
+  
+  .table-facture th, .table-facture td {
+    border: 1px solid #3d0e3f;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .table-facture th {
+    background-color: #3d0e3f;
+    color: #ffffff;
+  }
+  
+  .table-facture td input {
+    width: 90%;
+    padding: 5px;
+    text-align: center;
+  }
+  
+  /* Calculs */
+  .calculs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+  }
+  
+  .details-calculs p {
+    margin: 8px 0;
+    font-size: 0.9em;
+  }
+  
+  .details-calculs input {
+    width: 80px;
+    padding: 5px;
+    text-align: right;
+  }
+  
+  .solde-du {
+    text-align: right;
+  }
+  
+  .solde-du h3 {
+    color: #e53935;
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  /* Boutons */
+  .actions {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .actions button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #790034;
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .actions button:hover {
+    background-color: #844460;
+  }
+  
+  .actions button:active {
+    transform: scale(0.98);
+  }
+  

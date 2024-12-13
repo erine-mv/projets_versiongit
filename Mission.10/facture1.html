@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facture</title>
+  <link rel="stylesheet" href="facture1.css">
+</head>
+<body>
+  <div class="facture-container">
+    <header class="header-facture">
+      <div class="info-compagnie">
+        <h1>Nom de la compagnie</h1>
+        <p>Adresse postale</p>
+        <p>Détails du contact</p>
+      </div>
+      <div class="info-facture">
+        <h2>FACTURE</h2>
+        <p>Date : <span id="date-facture">26/01/2023</span></p>
+        <p>N° de facture : <span id="num-facture">12345</span></p>
+      </div>
+    </header>
+
+    <section class="destinataires">
+      <div class="destinataire">
+        <h3>Destinataire</h3><br>
+        <input type="text" placeholder="Nom"><br><br>
+        <input type="text" placeholder="Nom de la société"><br><br>
+        <input type="text" placeholder="Adresse postale"><br><br>
+        <input type="text" placeholder="Téléphone"><br><br>
+        <input type="text" placeholder="Email"><br><br>
+      </div>
+      <div class="envoyer-a">
+        <h3>Envoyez à</h3><br>
+        <input type="text" placeholder="Nom"><br><br>
+        <input type="text" placeholder="Nom de la société"><br><br>
+        <input type="text" placeholder="Adresse postale"><br><br>
+        <input type="text" placeholder="Téléphone"><br><br>
+        <input type="text" placeholder="Email"><br><br>
+      </div>
+    </section>
+
+    <section class="table-facture">
+      <table>
+        <thead>
+          <tr>
+            <th>DESCRIPTION</th>
+            <th>QUANTITÉ</th>
+            <th>PRIX UNITAIRE</th>
+            <th>TOTAL</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <tr>
+            <td><input type="text" class="desc" value="desc1"></td>
+            <td><input type="number" class="qte" value="12"></td>
+            <td><input type="number" class="prix" value="120"></td>
+            <td class="total-ligne">1440</td>
+          </tr>
+          <!-- Autres lignes seront ajoutées dynamiquement -->
+        </tbody>
+      </table>
+    </section>
+
+    <section class="calculs">
+      <div class="details-calculs">
+        <p>Sous-total : <span id="sous-total">1464</span></p>
+        <p>Remise : <input type="number" id="remise" value="10"></p>
+        <p>Sous-total moins les remises : <span id="sous-total-remise">1317.6</span></p>
+        <p>Taux d’imposition : <input type="number" id="taux" value="10">%</p>
+        <p>Taxe totale : <span id="taxe-totale">146.4</span></p>
+        <p>Expédition, manutention : <input type="number" id="expedition" value="5"></p>
+      </div>
+      <div class="solde-du">
+        <h3>SOLDE DU : <span id="solde">1469</span></h3>
+      </div>
+    </section>
+
+    <section class="actions">
+      <button id="calculer">Calculer</button>
+      <button id="ajouter-ligne">Ajouter une ligne</button>
+      <button id="remplir-auto">Remplir automatiquement</button>
+      <button id="annuler">Annuler</button><br><br>
+      <a href="../index.html">RETOUR A MES MISSIONS</a>
+    </section>
+  </div>
+  <script src="facture1.js"></script>
+</body>
+</html>
